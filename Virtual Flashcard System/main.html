@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"> 
+  <title>Virtual Flashcards</title>
+</head>
+<body>
+  <!-- Background -->
+  <div class="background">
+    <span class="ball"></span><span class="ball"></span><span class="ball"></span><span class="ball"></span>
+    <span class="ball"></span><span class="ball"></span><span class="ball"></span><span class="ball"></span>
+  </div>
+
+  <!-- Foreground App -->
+  <div class="app">
+    <h2>📂 Virtual Flashcard System</h2>
+    <!-- Navigation -->
+    <div class="navbar">
+      <button onclick="goHome()">🏠 Home</button>
+      <button onclick="goBack()">⬅ Back</button>
+    </div>
+    <!-- Controls -->
+    <div class="controls">
+      <input id="nameInput" placeholder="Enter name">
+      <button onclick="createFolder()">+ Folder</button>
+      <button onclick="showFlashInput()">+ Flashcard</button>
+    </div>
+    <!-- Flashcard Input Box -->
+    <div id="flashInputBox">
+      <h3>Create Flashcard</h3>
+      <input id="flashName" placeholder="Flashcard name">
+      <textarea id="flashQuestion" placeholder="Enter Question"></textarea>
+      <textarea id="flashAnswer" placeholder="Enter Answer"></textarea>
+      <button onclick="saveFlashcard()">Save</button>
+      <button onclick="cancelFlashInput()">Cancel</button>
+    </div>
+    <!-- Folder/File Explorer -->
+    <div id="explorer"></div>
+    <!-- Flashcard Display -->
+    <div id="flashcardArea"></div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
